@@ -1,0 +1,6 @@
+recovery_behaviors:
+  - name: 'force_field_recovery'
+    type: 'force_field_recovery/ForceFieldRecovery'
+  - name: 'clear_costmap_recovery'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+
