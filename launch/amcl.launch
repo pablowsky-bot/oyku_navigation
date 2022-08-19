@@ -2,7 +2,7 @@
 <launch>
 
     <!-- map server: load map from image and publish to ROS as occupancy matrix -->
-    <arg name="map" default="$(find pablowsky_navigation)/maps/42_fab_lab/map.yaml" />
+    <arg name="map" default="$(find pablowsky_navigation)/maps/blumen/map.yaml" />
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
     <!--- Run AMCL particle filter robot localisation algorithm -->
@@ -10,7 +10,7 @@
         <remap from="scan" to="/scan"/>
 
         <!--- Odometery model parameters  -->
-        <param name="odom_model_type" value="diff"/>
+        <param name="odom_model_type" value="omni"/>
         <param name="odom_alpha1" value="0.1"/>
         <param name="odom_alpha2" value="0.1"/>
         <param name="odom_alpha3" value="0.1"/>
